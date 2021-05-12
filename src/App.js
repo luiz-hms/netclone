@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import api from './services/api';
+import Header from './components/header/Header';
 import MovieRow from './components/MovieRow/MovieRow';
 import FeaturedMovie from './components/FeaturedMovie/FeaturedMovie';
 import './App.css';
@@ -22,6 +23,7 @@ const App = () => {
   },[])
   return (
     <div className='page'>
+      <Header/>
       {featuredData && 
       <FeaturedMovie item={featuredData} />
       }
